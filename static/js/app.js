@@ -19,9 +19,9 @@ d3.json(bio_data).then(function(data) {
      var trace1 = {
         x:sample_values.slice(0,10).reverse(),
         y:otu_ids
-            .slice(0,10)
-            .map((otuID) => `OTU ${otuID}`)
-            .reverse(),
+         .slice(0,10)
+         .map((otuID) => `OTU ${otuID}`)
+         .reverse(),
         text: otu_labels.slice(0,10).reverse(),
         type: "bar",
         orientation: "h"
@@ -33,7 +33,7 @@ d3.json(bio_data).then(function(data) {
         margin: {t: 60, l: 90},
         height: 300,
      };
-      // create barchart display
+      // Display barchart
      Plotly.newPlot("bar",data,layout);
 
      // Create Bubble Chart
